@@ -1,4 +1,7 @@
 require 'sinatra'
+require 'rack-livereload'
+
+use Rack::LiveReload
 
 class Sandbox < Sinatra::Base
 

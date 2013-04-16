@@ -1,0 +1,111 @@
+.mod-header
+  @include container
+  border: 2px red solid
+  +rem('height', 70px)
+
+  .logo
+    text-indent: -9999px
+    float: left
+    +rem('width', 160px)
+    +rem('height', 29px)
+    +rem('margin', 20px 0)
+    +data-uri-bg('logo.png')
+
+  nav
+    float: right
+    +rem('margin', 20px 0)
+    +rem('height', 29px)
+    font-weight: 600
+    ul
+
+      &.main-nav
+        +rem('margin-left', 10px)
+        border: 1px solid #ccc
+        +border-radius(3px)
+        background: white
+
+      &.white
+        border: 1px solid #ccc
+        +border-radius(3px)
+        background: #fff
+
+      li
+        float: left
+        +rem('margin', 0 8px)
+
+    a
+      float: left
+      text-decoration: none
+      +rem('line-height', 29px)
+      color: #444
+    span
+      float: left
+      color: $red
+      +rem('line-height', 29px)
+
+    .action
+      color: $red
+      +rem('font-size', 13px)
+      font-weight: 700
+      +rem('line-height', 30px)
+      i
+        +rem('margin', 0 5px)
+        +rem('font-size', 13px)
+        +rem('height', 19px)
+
+    .find
+      //+data-uri-bg('find.png', no-repeat center center)
+      +rem('width', 10px)
+      +rem('height', 29px)
+      +rem('font-size', 20px)
+      i
+        +rem('margin-left', -7px)
+
+    i
+      font-size: 20px
+
+.claim
+  clear: both
+  +rem('height', 35px)
+  +rem('margin-bottom', 40px)
+  font-weight: 600
+  .span-claim
+    float: left
+    display: block
+    +rem('font-size', 18px)
+    +rem('margin', 12px 20px)  
+  a
+    float: left
+    +rem('width', 226px)
+    text-align: center
+    +rem('margin-left', -1px)
+
+    span
+      color: #fff
+
+.search-line
+  .search-field
+    +rem('width', 236px)
+    position: relative
+    float: left
+    +rem('margin-right', 20px)
+    +rem('height', 80px)
+
+    label
+      font-weight: 600
+      +rem('margin', 5px)
+      +rem('font-size', 14px)
+    .form-input
+      position: relative
+      
+      input
+        +rem('height', 26px)
+        +rem('width', 226px)
+      .reset-field
+        +rem('bottom', -25px)
+  .submit-field
+    +rem('height', 80px)
+    button
+      float: left
+      +rem('margin-top', 29px)
+
