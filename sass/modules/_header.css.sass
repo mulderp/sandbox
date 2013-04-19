@@ -2,6 +2,15 @@
   @include container
   border: 2px red solid
   +rem('height', 70px)
+  @include container ($total-columns, $mobile-to-medium, $medium-to-large)
+
+  @include susy-grid-background
+
+  @include at-breakpoint($mobile-to-medium $columns-medium $medium-to-large)
+    @include susy-grid-background
+
+  @include at-breakpoint($medium-to-large)
+    @include susy-grid-background
 
   .logo
     text-indent: -9999px
@@ -73,7 +82,7 @@
     float: left
     display: block
     +rem('font-size', 18px)
-    +rem('margin', 12px 20px)  
+    +rem('margin', 12px 20px)
   a
     float: left
     +rem('width', 226px)
@@ -97,7 +106,7 @@
       +rem('font-size', 14px)
     .form-input
       position: relative
-      
+
       input
         +rem('height', 26px)
         +rem('width', 226px)
