@@ -15,7 +15,8 @@
   .logo
     text-indent: -9999px
     float: left
-    +rem('width', 160px)
+    border: 1px red solid
+    +rem('width', 90px)
     +rem('height', 29px)
     +rem('margin', 20px 0)
     +data-uri-bg('logo.png')
@@ -25,6 +26,16 @@
     +rem('margin', 20px 0)
     +rem('height', 29px)
     font-weight: 600
+    @include at-breakpoint($mobile-to-medium $columns-medium)
+      border: 1px blue solid
+      @include span-columns(2)
+      .tour
+        display: none
+        @include span-columns(1)
+      .action
+        border: 1px green solid
+        @include span-columns(1)
+
     ul
 
       &.main-nav
